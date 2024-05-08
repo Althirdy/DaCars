@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34407.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRent", "CarRent\CarRent.csproj", "{E24F715C-69B0-4868-B018-21DF4F7D3058}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E24F715C-69B0-4868-B018-21DF4F7D3058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E24F715C-69B0-4868-B018-21DF4F7D3058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E24F715C-69B0-4868-B018-21DF4F7D3058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E24F715C-69B0-4868-B018-21DF4F7D3058}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {880D2BD6-E7B8-43C5-9668-1EC7FB6A8862}
+	EndGlobalSection
+EndGlobal
