@@ -126,6 +126,18 @@
     <Compile Include="CarTableRow.Designer.cs">
       <DependentUpon>CarTableRow.cs</DependentUpon>
     </Compile>
+    <Compile Include="customerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="customerControl.Designer.cs">
+      <DependentUpon>customerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerPage.Designer.cs">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +166,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CarTableRow.resx">
       <DependentUpon>CarTableRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerControl.resx">
+      <DependentUpon>customerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPage.resx">
+      <DependentUpon>CustomerPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashPage.resx">
       <DependentUpon>DashPage.cs</DependentUpon>

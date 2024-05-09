@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2024 at 04:04 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: May 09, 2024 at 02:32 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -149,6 +149,29 @@ INSERT INTO `cars` (`id`, `car_name`, `car_model`, `price`, `plate_no`, `color`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `customer`
+--
+
+CREATE TABLE `customer` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(59) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `contact_no` varchar(20) NOT NULL,
+  `email` text NOT NULL,
+  `rent_count` int(11) NOT NULL,
+  `added_at` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id`, `first_name`, `last_name`, `contact_no`, `email`, `rent_count`, `added_at`) VALUES
+(1, 'alfredo', 'sanger', '09301420649', 'althirdysanger@gmail.com', 5, '2024-05-09');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `rent_status`
 --
 
@@ -193,6 +216,12 @@ ALTER TABLE `cars`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `rent_status`
 --
 ALTER TABLE `rent_status`
@@ -215,6 +244,12 @@ ALTER TABLE `transaction_table`
 --
 ALTER TABLE `cars`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+
+--
+-- AUTO_INCREMENT for table `customer`
+--
+ALTER TABLE `customer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `rent_status`

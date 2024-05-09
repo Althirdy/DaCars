@@ -17,6 +17,7 @@ namespace CarRent
         private DashPage Dash_page = new DashPage();
         private carPage Car_page = new carPage();
         private transactionPage transact_page = new transactionPage();
+        private customerPage customer_page = new customerPage();
         public Form1()
         {
             InitializeComponent();
@@ -90,6 +91,8 @@ namespace CarRent
         {
             Guna2Button clickedButton = (Guna2Button)sender;
             ChangeColor(clickedButton);
+            ShowForm(customer_page);
+
         }
     }
 }
