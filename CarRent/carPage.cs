@@ -24,8 +24,13 @@ namespace CarRent
             InitializeComponent();
             DBConnection();
             FetchingData();
-        }
+            add_car.carAdded += ReloadForm;
 
+        }
+        private void ReloadForm()
+        {
+            FetchingData();
+        }
         private void DBConnection() {
 
             connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString);

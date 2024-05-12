@@ -1,6 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using System.Configuration;
 using System.Data;
 using System;
@@ -14,13 +13,19 @@ namespace CarRent
         private int pageSize = 10;
         private int currentPage = 1;
         private int limit = 10;
+        private AddCustomer add_customer = new AddCustomer();
         public customerPage()
         {
             InitializeComponent();
             DBConnection();
             FetchingData();
+            add_customer.CustomerAdded += ReloadForm;
+
         }
 
+        private void ReloadForm() {
+            FetchingData();
+        }
         private void DBConnection()
         {
 
@@ -45,7 +50,7 @@ namespace CarRent
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
-
+       
                 int rowCount = dataTable.Rows.Count;
                 //iterate sa lahat ng data and pass sa props 
                 if (rowCount != 0)
@@ -57,7 +62,7 @@ namespace CarRent
                     {
 
                         customer_data[i] = new customerControl();
-                        customer_data[i].first_name_method= dataTable.Rows[i]["first_name"].ToString().ToUpper();
+                        customer_data[i].first_name_method = dataTable.Rows[i]["first_name"].ToString().ToUpper();
                         customer_data[i].id_method = (int)dataTable.Rows[i]["id"];
                         customer_data[i].last_name_method = dataTable.Rows[i]["last_name"].ToString().ToUpper();
                         customer_data[i].contact_no_method = dataTable.Rows[i]["contact_no"].ToString().ToUpper();
@@ -68,17 +73,22 @@ namespace CarRent
                     }
 
                 }
-            }
+            }   
             catch (Exception ex)
             {
 
-                MessageBox.Show("Database Connection Error: Fetching Customer Data" + ex.Message);
+                MessageBox.Show("Database Connection Error: Fetching Customer Data " + ex.Message +ex.StackTrace);
             }
             finally
             {
                 connection.Close();
             }
 
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            add_customer.Show();
         }
     }
 }

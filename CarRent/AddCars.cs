@@ -17,6 +17,8 @@ namespace CarRent
     {
         //Connection String
         private MySqlConnection connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString);
+        public delegate void carAddedEventHandler();
+        public event carAddedEventHandler carAdded;
         public AddCars()
         {
             InitializeComponent();
@@ -94,7 +96,8 @@ namespace CarRent
                             car_model_text.Text = "";
                             car_color_text.Text = "";
                             car_rate_text.Text = "";
-   
+                            carAdded?.Invoke();
+
                         }
                     }
                     catch (Exception ex)
