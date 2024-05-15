@@ -28,9 +28,11 @@ namespace CarRent
             DBConnection();
             FetchingData(null);
             trans_page.transactionAdded += ReloadForm;
-
+ 
         }
-
+        private void Updated() {
+            FetchingData(null);
+        }
         private void ReloadForm()
         {
             FetchingData(null);
@@ -65,11 +67,11 @@ namespace CarRent
                 int totalTransactions = Convert.ToInt32(countCommand.ExecuteScalar());
                 totalPages = (totalTransactions + pageSize - 1) / pageSize;
                 // Query to fetch transaction data with pagination
-                string query_select = $@"SELECT tt.invoice_no, tt.total_amount, tt.status, c.car_name, c.plate_no, cu.first_name, cu.last_name, cu.contact_no 
+                string query_select = $@"SELECT tt.id,tt.invoice_no, tt.total_amount, tt.status, c.car_name, c.plate_no, cu.first_name, cu.last_name, cu.contact_no 
                   FROM transaction_table AS tt 
                   JOIN cars AS c ON tt.car_id = c.id 
                   JOIN customer AS cu ON tt.client_id = cu.id 
-                  {(string.IsNullOrEmpty(searchTerm) ? "" : "WHERE tt.invoice_no LIKE @invoice")} 
+                  {(string.IsNullOrEmpty(searchTerm) ? "" : "WHERE tt.invoice_no LIKE @invoice OR c.plate_no LIKE @invoice")} 
                   ORDER BY tt.added_at DESC 
                   LIMIT {pageSize} OFFSET {(currentPage - 1) * pageSize}";
 
@@ -96,14 +98,17 @@ namespace CarRent
                     for (int i = 0; i < rowCount; i++)
                     {
                         string invoiceNo = dataTable.Rows[i]["invoice_no"].ToString().ToUpper();
+                        String car_name = dataTable.Rows[i]["car_name"].ToString().ToUpper();
+                        string full_name = $"{dataTable.Rows[i]["first_name"].ToString().ToUpper()} {dataTable.Rows[i]["last_name"].ToString().ToUpper()}";
                         transactions[i] = new transactionControl();
                         transactions[i].invoice_method = invoiceNo.Length > 10 ? invoiceNo.Substring(0, 10) + "..." : invoiceNo;
-                        transactions[i].full_name_method = $"{dataTable.Rows[i]["first_name"].ToString().ToUpper()} {dataTable.Rows[i]["last_name"].ToString().ToUpper()}";
-                        transactions[i].car_name_method = dataTable.Rows[i]["car_name"].ToString().ToUpper();
+                        transactions[i].full_name_method = full_name.Length > 10 ? full_name.Substring(0, 10) + "..." : full_name;
+                        transactions[i].car_name_method = car_name.Length > 7 ? car_name.Substring(0, 7) + "..." : car_name;
                         transactions[i].plate_no_method = dataTable.Rows[i]["plate_no"].ToString().ToUpper();
                         transactions[i].price_method = Convert.ToDouble(dataTable.Rows[i]["total_amount"]);
                         transactions[i].contact_no_method = dataTable.Rows[i]["contact_no"].ToString();
                         transactions[i].status_method = Convert.ToInt32(dataTable.Rows[i]["status"]);
+                        transactions[i].trans_id_method = Convert.ToInt32(dataTable.Rows[i]["id"]);
                         flowLayoutPanel1.Controls.Add(transactions[i]);
                     }
                 }
@@ -181,6 +186,11 @@ namespace CarRent
                     FetchingData(null);
                 }
             }
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            FetchingData(null);
         }
     }
 }

@@ -85,11 +85,11 @@ namespace CarRent
             this.status_text.ForeColor = System.Drawing.Color.White;
             this.status_text.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(254)))));
             this.status_text.HoverState.Parent = this.status_text;
-            this.status_text.Location = new System.Drawing.Point(621, 2);
+            this.status_text.Location = new System.Drawing.Point(621, 4);
             this.status_text.Name = "status_text";
             this.status_text.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(254)))));
             this.status_text.ShadowDecoration.Parent = this.status_text;
-            this.status_text.Size = new System.Drawing.Size(85, 27);
+            this.status_text.Size = new System.Drawing.Size(82, 24);
             this.status_text.TabIndex = 17;
             this.status_text.Text = "ON GOING";
             // 
@@ -105,12 +105,13 @@ namespace CarRent
             this.guna2GradientButton1.Font = new System.Drawing.Font("Roboto", 8F);
             this.guna2GradientButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(730, 3);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(729, 4);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Size = new System.Drawing.Size(68, 26);
+            this.guna2GradientButton1.Size = new System.Drawing.Size(66, 24);
             this.guna2GradientButton1.TabIndex = 16;
             this.guna2GradientButton1.Text = "MANAGE";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // guna2VSeparator1
             // 
@@ -173,7 +174,7 @@ namespace CarRent
             // plate_no_text
             // 
             this.plate_no_text.BackColor = System.Drawing.Color.Transparent;
-            this.plate_no_text.Location = new System.Drawing.Point(340, 8);
+            this.plate_no_text.Location = new System.Drawing.Point(335, 8);
             this.plate_no_text.Name = "plate_no_text";
             this.plate_no_text.Size = new System.Drawing.Size(43, 15);
             this.plate_no_text.TabIndex = 6;
@@ -190,7 +191,7 @@ namespace CarRent
             // car_name_text
             // 
             this.car_name_text.BackColor = System.Drawing.Color.Transparent;
-            this.car_name_text.Location = new System.Drawing.Point(247, 8);
+            this.car_name_text.Location = new System.Drawing.Point(237, 8);
             this.car_name_text.Name = "car_name_text";
             this.car_name_text.Size = new System.Drawing.Size(51, 15);
             this.car_name_text.TabIndex = 4;

@@ -12,9 +12,11 @@ namespace CarRent
 {
     public partial class transactionControl : UserControl
     {
+
         public transactionControl()
         {
             InitializeComponent();
+       
         }
 
         #region Properties
@@ -25,7 +27,7 @@ namespace CarRent
         private double price;
         private string contact_no;
         private int transaction_status;
-
+        private int transaction_id;
         [Category("Custom Props")]
         public string full_name_method
         {
@@ -102,12 +104,13 @@ namespace CarRent
                     status_text.FillColor = Color.FromArgb(96, 150, 254);
                     status_text.HoverState.FillColor = Color.FromArgb(96, 150, 254);
                     status_text.PressedColor = Color.FromArgb(96, 150, 254);
+                    guna2GradientButton1.Hide();
                 }
                 else if (transaction_status == 4)
                 {
                     status_text.Text = "RESERVED";
                     status_text.FillColor = Color.FromArgb(88, 88, 88);
-                    status_text.HoverState.FillColor = Color.FromArgb(155, 76, 21);
+                    status_text.HoverState.FillColor = Color.FromArgb(88, 88, 88);
                     status_text.PressedColor = Color.FromArgb(88, 88, 88);
 
                 }
@@ -116,16 +119,33 @@ namespace CarRent
                     status_text.FillColor = Color.FromArgb(155, 76, 21);
                     status_text.HoverState.FillColor = Color.FromArgb(155, 76, 21);
                     status_text.PressedColor = Color.FromArgb(155, 76, 21);
+                    guna2GradientButton1.Hide();
+
                 }
-            
+
             }
+        }
+        [Category("Custom Props")]
+
+        public int trans_id_method
+        {
+            get { return transaction_id; }
+            set { transaction_id = value; }
         }
 
 
 
 
 
+
         #endregion
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            EditTransaction transaction = new EditTransaction();
+            transaction.LoadTransactionDetails(this.transaction_id);
+            transaction.Show();
+        }
 
     }
 }

@@ -89,7 +89,7 @@ namespace CarRent
                             if (reader.GetInt32("status") == 1 || reader.GetInt32("status") == 4)
                             {
                                 MessageBox.Show($"The car with plate no. {plate_no} is rented.", "Car Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                plate_no_text.Text = "";
+                                return;
                             }
                             else
                             {
@@ -113,10 +113,8 @@ namespace CarRent
             }
             finally
             {
-                if (connection.State == ConnectionState.Open)
-                {
+              
                     connection.Close();
-                }
             }
         }
 
@@ -146,7 +144,7 @@ namespace CarRent
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            int day_before_rent;
+            //int day_before_rent;
             DateTime selectedDate = start_date.Value.Date;
             DateTime selectedReturnDate = return_date.Value.Date;
             string selectedDateString = start_date.Value.Date.ToString("yyyy-MM-dd");
@@ -165,9 +163,9 @@ namespace CarRent
             if (selectedDate > today)
             {
                 transaction_status = 4; // RESERVED
-                TimeSpan difference_reserved = selectedDate - today;
-                day_before_rent = difference_reserved.Days;
-                //MessageBox.Show($"Days before rent [Booked in]: {day_before_rent}");
+                //TimeSpan difference_reserved = selectedDate - today;
+                //day_before_rent = difference_reserved.Days;
+                ////MessageBox.Show($"Days before rent [Booked in]: {day_before_rent}");
             }
             else if (selectedDate == today)
             {
@@ -239,8 +237,6 @@ namespace CarRent
                     car_color_text.Text = "";
                     car_price_text.Text = "";
                     transactionAdded?.Invoke();
-
-                    //CustomerAdded?.Invoke();
 
 
                 }

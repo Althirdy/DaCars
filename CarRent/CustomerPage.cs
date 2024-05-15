@@ -197,5 +197,10 @@ namespace CarRent
                 }
             }
         }
+
+        private void ReloadClick(object sender, MouseEventArgs e)
+        {
+            FetchingData(null);
+        }
     }
 }

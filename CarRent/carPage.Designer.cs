@@ -48,6 +48,7 @@ namespace CarRent
             this.page_count = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.search_text = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@ namespace CarRent
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel3, 2, 0);
@@ -98,7 +99,7 @@ namespace CarRent
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(40, 4);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(39, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(50, 15);
             this.guna2HtmlLabel2.TabIndex = 1;
@@ -107,7 +108,7 @@ namespace CarRent
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(203, 4);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(199, 4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(51, 15);
             this.guna2HtmlLabel3.TabIndex = 2;
@@ -116,7 +117,7 @@ namespace CarRent
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(353, 4);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(349, 4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(66, 15);
             this.guna2HtmlLabel4.TabIndex = 3;
@@ -125,7 +126,7 @@ namespace CarRent
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(459, 4);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(455, 4);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(46, 15);
             this.guna2HtmlLabel5.TabIndex = 4;
@@ -134,7 +135,7 @@ namespace CarRent
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(548, 4);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(544, 4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(26, 15);
             this.guna2HtmlLabel6.TabIndex = 5;
@@ -143,7 +144,7 @@ namespace CarRent
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(618, 4);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(614, 4);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(33, 15);
             this.guna2HtmlLabel7.TabIndex = 6;
@@ -152,7 +153,7 @@ namespace CarRent
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(729, 4);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(725, 4);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(33, 15);
             this.guna2HtmlLabel8.TabIndex = 7;
@@ -195,7 +196,7 @@ namespace CarRent
             this.guna2Button1.Size = new System.Drawing.Size(37, 25);
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.Text = "Prev";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SubtractPagination);
             // 
             // flowLayoutPanel1
             // 
@@ -220,7 +221,7 @@ namespace CarRent
             this.guna2Button2.Size = new System.Drawing.Size(37, 25);
             this.guna2Button2.TabIndex = 6;
             this.guna2Button2.Text = "Next";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.guna2Button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AddPagination);
             // 
             // page_count
             // 
@@ -278,10 +279,25 @@ namespace CarRent
             this.search_text.ShadowDecoration.Parent = this.search_text;
             this.search_text.Size = new System.Drawing.Size(359, 29);
             this.search_text.TabIndex = 3;
-            this.search_text.Enter += new System.EventHandler(this.search_text_Enter);
-            this.search_text.KeyDown += new System.Windows.Forms.KeyEventHandler(this.search_);
-            this.search_text.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Up);
-            this.search_text.Leave += new System.EventHandler(this.search_text_Leave);
+            this.search_text.KeyDown += new System.Windows.Forms.KeyEventHandler(this.search_key_down);
+            this.search_text.KeyUp += new System.Windows.Forms.KeyEventHandler(this.search_key_up);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.BorderRadius = 5;
+            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
+            this.guna2Button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.HoverState.Parent = this.guna2Button4;
+            this.guna2Button4.Location = new System.Drawing.Point(365, 48);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
+            this.guna2Button4.Size = new System.Drawing.Size(65, 29);
+            this.guna2Button4.TabIndex = 18;
+            this.guna2Button4.Text = "Reload";
+            this.guna2Button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ReloadClick);
             // 
             // carPage
             // 
@@ -289,6 +305,7 @@ namespace CarRent
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(814, 555);
+            this.Controls.Add(this.guna2Button4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Button3);
@@ -330,5 +347,6 @@ namespace CarRent
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
     }
 }
