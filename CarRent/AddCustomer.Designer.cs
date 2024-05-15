@@ -67,13 +67,13 @@ namespace CarRent
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(414, 362);
+            this.guna2Panel1.Size = new System.Drawing.Size(409, 345);
             this.guna2Panel1.TabIndex = 1;
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(16, 241);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(16, 221);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(91, 15);
             this.guna2HtmlLabel5.TabIndex = 9;
@@ -97,7 +97,7 @@ namespace CarRent
             this.license_no_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.license_no_text.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.license_no_text.HoverState.Parent = this.license_no_text;
-            this.license_no_text.Location = new System.Drawing.Point(16, 262);
+            this.license_no_text.Location = new System.Drawing.Point(16, 242);
             this.license_no_text.Name = "license_no_text";
             this.license_no_text.PasswordChar = '\0';
             this.license_no_text.PlaceholderText = "";
@@ -145,7 +145,7 @@ namespace CarRent
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(16, 177);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(16, 162);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(69, 15);
             this.guna2HtmlLabel4.TabIndex = 0;
@@ -169,7 +169,7 @@ namespace CarRent
             this.email_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.email_text.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.email_text.HoverState.Parent = this.email_text;
-            this.email_text.Location = new System.Drawing.Point(16, 198);
+            this.email_text.Location = new System.Drawing.Point(16, 183);
             this.email_text.Name = "email_text";
             this.email_text.PasswordChar = '\0';
             this.email_text.PlaceholderText = "";
@@ -181,7 +181,7 @@ namespace CarRent
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(16, 110);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(16, 103);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(60, 15);
             this.guna2HtmlLabel3.TabIndex = 0;
@@ -205,7 +205,7 @@ namespace CarRent
             this.contact_no_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.contact_no_text.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.contact_no_text.HoverState.Parent = this.contact_no_text;
-            this.contact_no_text.Location = new System.Drawing.Point(16, 131);
+            this.contact_no_text.Location = new System.Drawing.Point(16, 124);
             this.contact_no_text.Name = "contact_no_text";
             this.contact_no_text.PasswordChar = '\0';
             this.contact_no_text.PlaceholderText = "xxxx-xxx-xxxx";
@@ -270,7 +270,7 @@ namespace CarRent
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(205, 311);
+            this.guna2Button3.Location = new System.Drawing.Point(205, 295);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(92, 33);
@@ -290,7 +290,7 @@ namespace CarRent
             this.guna2Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(42)))), ((int)(((byte)(34)))));
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(303, 311);
+            this.guna2Button1.Location = new System.Drawing.Point(303, 295);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(28)))), ((int)(((byte)(9)))));
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
@@ -304,7 +304,7 @@ namespace CarRent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 362);
+            this.ClientSize = new System.Drawing.Size(409, 345);
             this.ControlBox = false;
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

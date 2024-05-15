@@ -103,12 +103,19 @@ namespace CarRent
                     status_text.HoverState.FillColor = Color.FromArgb(96, 150, 254);
                     status_text.PressedColor = Color.FromArgb(96, 150, 254);
                 }
+                else if (transaction_status == 4)
+                {
+                    status_text.Text = "RESERVED";
+                    status_text.FillColor = Color.FromArgb(88, 88, 88);
+                    status_text.HoverState.FillColor = Color.FromArgb(155, 76, 21);
+                    status_text.PressedColor = Color.FromArgb(88, 88, 88);
+
+                }
                 else {
                     status_text.Text = "CANCELED";
                     status_text.FillColor = Color.FromArgb(155, 76, 21);
                     status_text.HoverState.FillColor = Color.FromArgb(155, 76, 21);
                     status_text.PressedColor = Color.FromArgb(155, 76, 21);
-
                 }
             
             }

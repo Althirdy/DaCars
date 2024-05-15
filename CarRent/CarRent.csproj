@@ -108,6 +108,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_transaction.Designer.cs">
+      <DependentUpon>Add_transaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddCars.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     <Compile Include="transactionPage.Designer.cs">
       <DependentUpon>transactionPage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add_transaction.resx">
+      <DependentUpon>Add_transaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddCars.resx">
       <DependentUpon>AddCars.cs</DependentUpon>
     </EmbeddedResource>

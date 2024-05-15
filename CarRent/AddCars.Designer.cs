@@ -67,13 +67,13 @@ namespace CarRent
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(414, 397);
+            this.guna2Panel1.Size = new System.Drawing.Size(410, 363);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(212, 261);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(212, 233);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(46, 15);
             this.guna2HtmlLabel7.TabIndex = 0;
@@ -97,7 +97,7 @@ namespace CarRent
             this.car_color_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.car_color_text.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.car_color_text.HoverState.Parent = this.car_color_text;
-            this.car_color_text.Location = new System.Drawing.Point(212, 282);
+            this.car_color_text.Location = new System.Drawing.Point(212, 254);
             this.car_color_text.Name = "car_color_text";
             this.car_color_text.PasswordChar = '\0';
             this.car_color_text.PlaceholderText = "";
@@ -109,7 +109,7 @@ namespace CarRent
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(16, 261);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(16, 233);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(45, 15);
             this.guna2HtmlLabel5.TabIndex = 0;
@@ -133,7 +133,7 @@ namespace CarRent
             this.car_rate_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.car_rate_text.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.car_rate_text.HoverState.Parent = this.car_rate_text;
-            this.car_rate_text.Location = new System.Drawing.Point(16, 282);
+            this.car_rate_text.Location = new System.Drawing.Point(16, 254);
             this.car_rate_text.Name = "car_rate_text";
             this.car_rate_text.PasswordChar = '\0';
             this.car_rate_text.PlaceholderText = "";
@@ -145,7 +145,7 @@ namespace CarRent
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(16, 193);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(16, 174);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(47, 15);
             this.guna2HtmlLabel4.TabIndex = 0;
@@ -169,7 +169,7 @@ namespace CarRent
             this.plate_no_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.plate_no_text.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.plate_no_text.HoverState.Parent = this.plate_no_text;
-            this.plate_no_text.Location = new System.Drawing.Point(16, 214);
+            this.plate_no_text.Location = new System.Drawing.Point(16, 195);
             this.plate_no_text.Name = "plate_no_text";
             this.plate_no_text.PasswordChar = '\0';
             this.plate_no_text.PlaceholderText = "";
@@ -181,7 +181,7 @@ namespace CarRent
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(16, 124);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(16, 115);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(51, 15);
             this.guna2HtmlLabel3.TabIndex = 0;
@@ -205,7 +205,7 @@ namespace CarRent
             this.car_model_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.car_model_text.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.car_model_text.HoverState.Parent = this.car_model_text;
-            this.car_model_text.Location = new System.Drawing.Point(16, 145);
+            this.car_model_text.Location = new System.Drawing.Point(16, 136);
             this.car_model_text.Name = "car_model_text";
             this.car_model_text.PasswordChar = '\0';
             this.car_model_text.PlaceholderText = "e.g Honda";
@@ -270,7 +270,7 @@ namespace CarRent
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(205, 339);
+            this.guna2Button3.Location = new System.Drawing.Point(205, 310);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(92, 33);
@@ -290,7 +290,7 @@ namespace CarRent
             this.guna2Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(42)))), ((int)(((byte)(34)))));
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(303, 339);
+            this.guna2Button1.Location = new System.Drawing.Point(303, 310);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(28)))), ((int)(((byte)(9)))));
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
@@ -304,7 +304,7 @@ namespace CarRent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 397);
+            this.ClientSize = new System.Drawing.Size(410, 363);
             this.ControlBox = false;
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

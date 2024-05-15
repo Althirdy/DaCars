@@ -152,3 +152,4 @@ C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.pdb
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.transactionControl.resources
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.csproj.AssemblyReference.cache
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.AddCustomer.resources
+C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.Add_Transaction.resources

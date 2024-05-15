@@ -81,15 +81,15 @@ namespace CarRent
             this.status_text.CheckedState.Parent = this.status_text;
             this.status_text.CustomImages.Parent = this.status_text;
             this.status_text.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(254)))));
-            this.status_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.status_text.Font = new System.Drawing.Font("Roboto", 8F);
             this.status_text.ForeColor = System.Drawing.Color.White;
             this.status_text.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(254)))));
             this.status_text.HoverState.Parent = this.status_text;
-            this.status_text.Location = new System.Drawing.Point(615, 2);
+            this.status_text.Location = new System.Drawing.Point(621, 2);
             this.status_text.Name = "status_text";
             this.status_text.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(254)))));
             this.status_text.ShadowDecoration.Parent = this.status_text;
-            this.status_text.Size = new System.Drawing.Size(84, 27);
+            this.status_text.Size = new System.Drawing.Size(85, 27);
             this.status_text.TabIndex = 17;
             this.status_text.Text = "ON GOING";
             // 
@@ -102,13 +102,13 @@ namespace CarRent
             this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
             this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(171)))), ((int)(((byte)(25)))));
             this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(171)))), ((int)(((byte)(25)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Roboto", 8F);
             this.guna2GradientButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(723, 3);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(730, 3);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
-            this.guna2GradientButton1.Size = new System.Drawing.Size(79, 27);
+            this.guna2GradientButton1.Size = new System.Drawing.Size(68, 26);
             this.guna2GradientButton1.TabIndex = 16;
             this.guna2GradientButton1.Text = "MANAGE";
             // 

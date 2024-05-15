@@ -120,6 +120,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(37, 25);
             this.guna2Button2.TabIndex = 27;
             this.guna2Button2.Text = "Next";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
@@ -136,6 +137,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(37, 25);
             this.guna2Button1.TabIndex = 26;
             this.guna2Button1.Text = "Prev";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -157,7 +159,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel3, 2, 0);
@@ -198,7 +200,7 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(120, 4);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(118, 4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(62, 15);
             this.guna2HtmlLabel3.TabIndex = 2;
@@ -208,7 +210,7 @@
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(334, 4);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(332, 4);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(81, 15);
             this.guna2HtmlLabel5.TabIndex = 4;
@@ -218,7 +220,7 @@
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(555, 4);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(553, 4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(53, 15);
             this.guna2HtmlLabel6.TabIndex = 5;
@@ -228,7 +230,7 @@
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(650, 4);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(648, 4);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(51, 15);
             this.guna2HtmlLabel7.TabIndex = 6;
@@ -238,7 +240,7 @@
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(709, 4);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(707, 4);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(38, 15);
             this.guna2HtmlLabel8.TabIndex = 7;
@@ -248,7 +250,7 @@
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(207, 4);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(205, 4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(68, 15);
             this.guna2HtmlLabel4.TabIndex = 3;
@@ -283,6 +285,10 @@
             this.search_text.ShadowDecoration.Parent = this.search_text;
             this.search_text.Size = new System.Drawing.Size(359, 29);
             this.search_text.TabIndex = 23;
+            this.search_text.Enter += new System.EventHandler(this.SearchFocus);
+            this.search_text.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchDown);
+            this.search_text.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyUp);
+            this.search_text.Leave += new System.EventHandler(this.search_text_Leave);
             // 
             // label2
             // 
@@ -317,6 +323,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "customerPage";
             this.Text = "customerPage";
+            this.Load += new System.EventHandler(this.CustomerLoad);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
