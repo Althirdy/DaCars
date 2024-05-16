@@ -109,6 +109,7 @@ namespace CarRent
             this.guna2GradientButton1.Size = new System.Drawing.Size(65, 25);
             this.guna2GradientButton1.TabIndex = 16;
             this.guna2GradientButton1.Text = "Edit";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // guna2VSeparator1
             // 

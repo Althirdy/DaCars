@@ -73,7 +73,7 @@ namespace CarRent
         }
         private void fetchCarData(string plate_no)
         {
-            string query = "SELECT id, car_name, color, status, price FROM cars WHERE plate_no = @plate_no";
+            string query = "SELECT id, car_name, color, status, price FROM cars WHERE plate_no = @plate_no AND car_status=1";
 
             try
             {
@@ -102,7 +102,7 @@ namespace CarRent
                         }
                         else
                         {
-                            MessageBox.Show("No car found with the provided plate number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No car found with the provided plate number Or The Car is out of the Garage.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -270,7 +270,7 @@ namespace CarRent
 
                     while (reader.Read())
                     {
-                        autoComplete.Add(reader["plate_no"].ToString());
+                        autoComplete.Add(reader["plate_no"].ToString().ToUpper());
                     }
 
                     plate_no_text.AutoCompleteCustomSource = autoComplete;
@@ -320,7 +320,7 @@ namespace CarRent
 
                     while (reader.Read())
                     {
-                        autoComplete.Add(reader["driver_license_no"].ToString());
+                        autoComplete.Add(reader["driver_license_no"].ToString().ToUpper());
                     }
 
                     license_no.AutoCompleteCustomSource = autoComplete;

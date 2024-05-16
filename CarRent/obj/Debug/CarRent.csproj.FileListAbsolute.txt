@@ -154,3 +154,4 @@ C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.csproj.AssemblyRefer
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.AddCustomer.resources
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.Add_Transaction.resources
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.EditTransaction.resources
+C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.EditCars.resources

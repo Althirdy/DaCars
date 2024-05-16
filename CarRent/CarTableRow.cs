@@ -100,22 +100,32 @@ namespace CarRent
                     statusLabel.HoverState.FillColor = Color.FromArgb(225, 75, 86);
                     statusLabel.PressedColor = Color.FromArgb(225, 75, 86);
                     guna2Panel1.FillColor = Color.FromArgb(224, 228, 255);
+                    guna2GradientButton1.Hide();
                 }
                 else if (value == 4) {
                     statusLabel.Text = "RESERVED";
                     statusLabel.FillColor = Color.FromArgb(88, 88, 88);
-                    statusLabel.HoverState.FillColor = Color.FromArgb(155, 76, 21);
+                    statusLabel.HoverState.FillColor = Color.FromArgb(88, 88, 88);
                     statusLabel.PressedColor = Color.FromArgb(88, 88, 88);
                     guna2Panel1.FillColor = Color.FromArgb(224, 228, 255);
+                    guna2GradientButton1.Hide();
+
                 }
                 else
                     statusLabel.Text = "AVAILABLE";
             }
         }
 
-     
+
 
 
         #endregion
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            EditCars edit_car = new EditCars();
+            edit_car.setCarId(car_id_props);
+            edit_car.Show();
+        }
     }
 }

@@ -48,12 +48,12 @@ namespace CarRent
 
                 if (string.IsNullOrWhiteSpace(search))
                 {
-                    query = "SELECT COUNT(*) FROM cars";
+                    query = "SELECT COUNT(*) FROM cars WHERE car_status = 1";
                     countCommand = new MySqlCommand(query, connection);
                 }
                 else
                 {
-                    query = "SELECT COUNT(*) FROM cars WHERE plate_no LIKE @search";
+                    query = "SELECT COUNT(*) FROM cars WHERE plate_no LIKE @search AND car_status = 1";
                     countCommand = new MySqlCommand(query, connection);
                     countCommand.Parameters.AddWithValue("@search", $"%{search}%");
                 }
@@ -68,8 +68,8 @@ namespace CarRent
 
                     // Construct main query with pagination
                     query = string.IsNullOrWhiteSpace(search) ?
-                        $"SELECT * FROM cars ORDER BY added_at DESC LIMIT {pageSize} OFFSET {offset}" :
-                        "SELECT * FROM cars WHERE plate_no LIKE @search ORDER BY added_at DESC LIMIT @pageSize OFFSET @offset";
+                        $"SELECT * FROM cars WHERE car_status =1 ORDER BY added_at DESC LIMIT {pageSize} OFFSET {offset}" :
+                        "SELECT * FROM cars WHERE plate_no LIKE @search AND car_status = 1 ORDER BY added_at DESC LIMIT @pageSize OFFSET @offset";
 
                     MySqlCommand command = new MySqlCommand(query, connection);
 

@@ -186,6 +186,7 @@ namespace CarRent
                                     transaction.Commit();
                                     fetchingData();
                                     MessageBox.Show("Transaction updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Dispose();
                                 }
                                 else
                                 {
@@ -230,62 +231,118 @@ namespace CarRent
             }
         }
 
-        private Boolean checkingInputs() {
-            Boolean isReadyToSave = true;
+        private Boolean checkingInputs()
+        {
+            Boolean isReadyToSave = false;
             DateTime selectedDate = rent_date.Value.Date;
             DateTime selectedReturnDate = return_date.Value.Date;
-            string selectedDateString = rent_date.Value.Date.ToString("yyyy-MM-dd");
-            string ReturnDateString = return_date.Value.Date.ToString("yyyy-MM-dd");
             DateTime today = DateTime.Today;
-            int status_value = status_combo.SelectedIndex + 1;
-            //MessageBox.Show(status_value.ToString());
-            if (selectedReturnDate <= selectedDate)
+
+            // Overall validation: Rent date and return date cannot be the same
+            if (selectedDate == selectedReturnDate)
             {
-                MessageBox.Show("Please select a return date that is after the start date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isReadyToSave = false;
+                MessageBox.Show("Error: Rent date and return date cannot be the same.", "Date Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false; // Return early as further validation is not needed
             }
+
+            // Overall validation: Rent date cannot be less than today's date
             if (selectedDate < today)
             {
-                MessageBox.Show("Please select a rent date that is today or  after today's date for reservation.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isReadyToSave = false;
+                MessageBox.Show("Error: Rent date cannot be in the past.", "Date Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false; // Return early as further validation is not needed
             }
-            if (selectedDate > today && status_value == 1)
-            {
-                MessageBox.Show("Error: Cannot select 'ON GOING' status because the selected date is not today.", "Date Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isReadyToSave = false;
-                status_combo.SelectedIndex = 3;
 
-            }
-            else if (statusId != 1 && status_value == 2)
+            // Overall validation: Rent date cannot be greater than return date
+            if (selectedDate > selectedReturnDate)
             {
-                MessageBox.Show("Error: You cannot finish the rent if the status is not 'ON GOING'. You can cancel it instead.", "Date Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isReadyToSave = false;
-                status_combo.SelectedIndex = 2;
+                MessageBox.Show("Error: Rent date cannot be later than the return date.", "Date Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false; // Return early as further validation is not needed
             }
-            else if (selectedDate == today && status_value == 4) {
-                MessageBox.Show("Error: You cannot reserve the car because the rental date is today. You can rent it and change the status to 'ON GOING'.", "Date Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                isReadyToSave = false;
-                status_combo.SelectedIndex = 0;
 
-
-            }
-            if (statusId == 1 && status_combo.SelectedIndex == 2 || (selectedDate != data_rent_date || selectedReturnDate != data_return_data)  ) 
+            // If the status is 'ON GOING' and the selected status is 'FINISHED'
+            if (statusId == 1 && status_combo.SelectedIndex == 1)
             {
-                MessageBox.Show("Error: You cannot change the date while the rent is ongoing or you cannot cancel the On Going Rent. Please finish the rent instead.", "Date Change Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                status_combo.SelectedIndex = 1;
+                isReadyToSave = true;
+            }
+            else if (statusId != 1)
+            { // If the status is not 'ON GOING'
+              // Validate date changes and calculate new total price if dates are changed
+                if (selectedDate != data_rent_date || selectedReturnDate != data_return_data)
+                {
+                    TimeSpan difference = selectedReturnDate - selectedDate;
+                    int day_before_return = difference.Days;
+                    new_total_price = Math.Round(car_price * day_before_return, 2);
+
+                    // Check if the return date is after the rent date
+                    if (selectedReturnDate > selectedDate)
+                    {
+                        isReadyToSave = true;
+                    }
+
+                    // Check if the rent date is in the future and status is 'RESERVED' or 'CANCELLED'
+                    if (selectedDate > today && (status_combo.SelectedIndex == 3 || status_combo.SelectedIndex == 2))
+                    {
+                        isReadyToSave = true;
+                    }
+
+                    // Check if the rent date is today and status is 'ON GOING'
+                    if (selectedDate == today && status_combo.SelectedIndex == 0)
+                    {
+                        isReadyToSave = true;
+                    }
+                }
+                else
+                {
+                    new_total_price = 0;
+                }
+            }
+
+            // Additional specific checks based on the requirements
+            if (statusId == 1 && (selectedDate != data_rent_date || selectedReturnDate != data_return_data))
+            {
+                MessageBox.Show("Error: You cannot change the date while the rent is ongoing. Please finish the rent instead.", "Date Change Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 rent_date.Value = data_rent_date;
                 return_date.Value = data_return_data;
                 isReadyToSave = false;
             }
-            if (selectedDate != data_rent_date || selectedReturnDate != data_return_data)
+
+            if (selectedDate > today && status_combo.SelectedIndex == 1)
             {
-                TimeSpan difference = selectedReturnDate - selectedDate;
-                int day_before_return = difference.Days;
-                new_total_price = Math.Round(car_price * day_before_return, 2);
+                MessageBox.Show("Error: Cannot select 'ON GOING' status because the selected date is not today.", "Date Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isReadyToSave = false;
+                status_combo.SelectedIndex = 3; // Set to 'RESERVED'
             }
-            else {
-                new_total_price = 0;
+
+            if (statusId != 1 && status_combo.SelectedIndex == 1)
+            {
+                MessageBox.Show("Error: You cannot finish the rent if the status is not 'ON GOING'. You can cancel it instead.", "Date Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isReadyToSave = false;
+                status_combo.SelectedIndex = 2; // Set to 'CANCELLED'
             }
+
+            if (selectedDate == today && status_combo.SelectedIndex == 3)
+            {
+                MessageBox.Show("Error: You cannot reserve the car because the rental date is today. You can rent it and change the status to 'ON GOING'.", "Date Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isReadyToSave = false;
+                status_combo.SelectedIndex = 0; // Set to 'ON GOING'
+            }
+            if (statusId == 4 && selectedDate == data_rent_date && selectedReturnDate == data_return_data)
+            {
+                // If the dates are not changed and the status is RESERVED
+                // Only allow selecting the 'CANCELLED' status
+                if (status_combo.SelectedIndex != 2) // If not already set to 'CANCELLED'
+                {
+                    MessageBox.Show("Error: If the rental is reserved and dates are not changed, the status must be set to 'CANCELLED'.", "Status Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    status_combo.SelectedIndex = 2; // Set to 'CANCELLED'
+                    isReadyToSave = false;
+                }
+                else {
+
+                    isReadyToSave = true;
+
+                }
+            }
+
             return isReadyToSave;
         }
     }

@@ -156,6 +156,12 @@
     <Compile Include="DashPage.Designer.cs">
       <DependentUpon>DashPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCars.Designer.cs">
+      <DependentUpon>EditCars.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashPage.resx">
       <DependentUpon>DashPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCars.resx">
+      <DependentUpon>EditCars.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditTransaction.resx">
       <DependentUpon>EditTransaction.cs</DependentUpon>
