@@ -109,22 +109,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_transaction.cs">
+    <Compile Include="AddForms\Add_transaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_transaction.Designer.cs">
+    <Compile Include="AddForms\Add_transaction.Designer.cs">
       <DependentUpon>Add_transaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddCars.cs">
+    <Compile Include="AddForms\AddCars.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCars.Designer.cs">
+    <Compile Include="AddForms\AddCars.Designer.cs">
       <DependentUpon>AddCars.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddCustomer.cs">
+    <Compile Include="AddForms\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCustomer.Designer.cs">
+    <Compile Include="AddForms\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="CarArchive.cs">
@@ -139,16 +139,22 @@
     <Compile Include="carPage.Designer.cs">
       <DependentUpon>carPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="CarTableRow.cs">
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CarTableRow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CarTableRow.Designer.cs">
+    <Compile Include="UserControls\CarTableRow.Designer.cs">
       <DependentUpon>CarTableRow.cs</DependentUpon>
     </Compile>
-    <Compile Include="customerControl.cs">
+    <Compile Include="UserControls\customerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="customerControl.Designer.cs">
+    <Compile Include="UserControls\customerControl.Designer.cs">
       <DependentUpon>customerControl.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerPage.cs">
@@ -157,16 +163,16 @@
     <Compile Include="CustomerPage.Designer.cs">
       <DependentUpon>CustomerPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashBoardCustomerControl.cs">
+    <Compile Include="UserControls\DashBoardCustomerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DashBoardCustomerControl.Designer.cs">
+    <Compile Include="UserControls\DashBoardCustomerControl.Designer.cs">
       <DependentUpon>DashBoardCustomerControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashBoardLoagControl.cs">
+    <Compile Include="UserControls\DashBoardLoagControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DashBoardLoagControl.Designer.cs">
+    <Compile Include="UserControls\DashBoardLoagControl.Designer.cs">
       <DependentUpon>DashBoardLoagControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DashPage.cs">
@@ -175,28 +181,28 @@
     <Compile Include="DashPage.Designer.cs">
       <DependentUpon>DashPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditCars.cs">
+    <Compile Include="EditForms\EditCars.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditCars.Designer.cs">
+    <Compile Include="EditForms\EditCars.Designer.cs">
       <DependentUpon>EditCars.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditCustomer.cs">
+    <Compile Include="EditForms\EditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditCustomer.Designer.cs">
+    <Compile Include="EditForms\EditCustomer.Designer.cs">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditCustomerControl.cs">
+    <Compile Include="UserControls\EditCustomerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EditCustomerControl.Designer.cs">
+    <Compile Include="UserControls\EditCustomerControl.Designer.cs">
       <DependentUpon>EditCustomerControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditTransaction.cs">
+    <Compile Include="EditForms\EditTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditTransaction.Designer.cs">
+    <Compile Include="EditForms\EditTransaction.Designer.cs">
       <DependentUpon>EditTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -205,18 +211,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="OffSiteCar.cs">
+    <Compile Include="UserControls\OffSiteCar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OffSiteCar.Designer.cs">
+    <Compile Include="UserControls\OffSiteCar.Designer.cs">
       <DependentUpon>OffSiteCar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="transactionControl.cs">
+    <Compile Include="UserControls\transactionControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="transactionControl.Designer.cs">
+    <Compile Include="UserControls\transactionControl.Designer.cs">
       <DependentUpon>transactionControl.cs</DependentUpon>
     </Compile>
     <Compile Include="transactionPage.cs">
@@ -225,13 +231,13 @@
     <Compile Include="transactionPage.Designer.cs">
       <DependentUpon>transactionPage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add_transaction.resx">
+    <EmbeddedResource Include="AddForms\Add_transaction.resx">
       <DependentUpon>Add_transaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCars.resx">
+    <EmbeddedResource Include="AddForms\AddCars.resx">
       <DependentUpon>AddCars.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCustomer.resx">
+    <EmbeddedResource Include="AddForms\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CarArchive.resx">
@@ -240,40 +246,43 @@
     <EmbeddedResource Include="carPage.resx">
       <DependentUpon>carPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CarTableRow.resx">
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CarTableRow.resx">
       <DependentUpon>CarTableRow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="customerControl.resx">
+    <EmbeddedResource Include="UserControls\customerControl.resx">
       <DependentUpon>customerControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerPage.resx">
       <DependentUpon>CustomerPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashBoardCustomerControl.resx">
+    <EmbeddedResource Include="UserControls\DashBoardCustomerControl.resx">
       <DependentUpon>DashBoardCustomerControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashBoardLoagControl.resx">
+    <EmbeddedResource Include="UserControls\DashBoardLoagControl.resx">
       <DependentUpon>DashBoardLoagControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashPage.resx">
       <DependentUpon>DashPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditCars.resx">
+    <EmbeddedResource Include="EditForms\EditCars.resx">
       <DependentUpon>EditCars.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditCustomer.resx">
+    <EmbeddedResource Include="EditForms\EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditCustomerControl.resx">
+    <EmbeddedResource Include="UserControls\EditCustomerControl.resx">
       <DependentUpon>EditCustomerControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditTransaction.resx">
+    <EmbeddedResource Include="EditForms\EditTransaction.resx">
       <DependentUpon>EditTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OffSiteCar.resx">
+    <EmbeddedResource Include="UserControls\OffSiteCar.resx">
       <DependentUpon>OffSiteCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -286,7 +295,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="transactionControl.resx">
+    <EmbeddedResource Include="UserControls\transactionControl.resx">
       <DependentUpon>transactionControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="transactionPage.resx">
@@ -351,5 +360,6 @@
   <ItemGroup>
     <None Include="assets\logout.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

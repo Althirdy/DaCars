@@ -28,7 +28,7 @@ namespace CarRent
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
         }
 
         private void fetchCustomerData(string driverLicense)

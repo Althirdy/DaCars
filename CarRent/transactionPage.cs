@@ -121,7 +121,7 @@ namespace CarRent
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            trans_page.Show();
+            trans_page.Hide();
         }
 
         private void Add_pagination(object sender, EventArgs e)

@@ -115,5 +115,23 @@ namespace CarRent
             ChangeColor(clickedButton);
             ShowForm(archive);
         }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                LoginForm login = new LoginForm();
+                login.Show();
+
+                this.Dispose();
+            }
+        }
     }
 }

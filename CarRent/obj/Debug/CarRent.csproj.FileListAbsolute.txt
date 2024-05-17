@@ -161,3 +161,4 @@ C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.EditCustomer.resourc
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.EditCustomerControl.resources
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.DashBoardLoagControl.resources
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.DashBoardCustomerControl.resources
+C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.LoginForm.resources

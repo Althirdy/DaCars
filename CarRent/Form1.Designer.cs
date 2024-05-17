@@ -79,6 +79,7 @@ namespace CarRent
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 0;
             this.guna2ControlBox1.UseTransparentBackground = true;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2DragControl1
             // 
@@ -106,6 +107,7 @@ namespace CarRent
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(255)))));
             this.label3.Location = new System.Drawing.Point(61, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 27);
@@ -143,6 +145,7 @@ namespace CarRent
             this.logout.TabIndex = 7;
             this.logout.Text = "Logout";
             this.logout.TextOffset = new System.Drawing.Point(-5, 0);
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // pictureBox1
             // 
