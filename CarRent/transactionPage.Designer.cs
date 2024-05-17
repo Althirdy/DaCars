@@ -89,7 +89,7 @@ namespace CarRent
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel2, 1, 0);
@@ -118,7 +118,7 @@ namespace CarRent
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(104, 4);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(102, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(60, 15);
             this.guna2HtmlLabel2.TabIndex = 1;
@@ -127,7 +127,7 @@ namespace CarRent
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(234, 4);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(230, 4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(19, 15);
             this.guna2HtmlLabel3.TabIndex = 2;
@@ -136,7 +136,7 @@ namespace CarRent
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(332, 4);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(328, 4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(66, 15);
             this.guna2HtmlLabel4.TabIndex = 3;
@@ -145,7 +145,7 @@ namespace CarRent
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(441, 4);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(437, 4);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(39, 15);
             this.guna2HtmlLabel5.TabIndex = 4;
@@ -154,7 +154,7 @@ namespace CarRent
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(509, 4);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(505, 4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(69, 15);
             this.guna2HtmlLabel6.TabIndex = 5;
@@ -163,7 +163,7 @@ namespace CarRent
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(613, 4);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(609, 4);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(33, 15);
             this.guna2HtmlLabel7.TabIndex = 6;
@@ -261,10 +261,8 @@ namespace CarRent
             this.search_text.ShadowDecoration.Parent = this.search_text;
             this.search_text.Size = new System.Drawing.Size(359, 29);
             this.search_text.TabIndex = 20;
-            this.search_text.Enter += new System.EventHandler(this.search_text_enter);
             this.search_text.KeyDown += new System.Windows.Forms.KeyEventHandler(this.search_);
             this.search_text.KeyUp += new System.Windows.Forms.KeyEventHandler(this.search_key_up);
-            this.search_text.Leave += new System.EventHandler(this.search_text_leave);
             // 
             // flowLayoutPanel1
             // 

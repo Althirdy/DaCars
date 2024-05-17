@@ -109,5 +109,13 @@ namespace CarRent
 
 
         #endregion
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            EditCustomer edt_customer = new EditCustomer();
+            edt_customer.setClientId(id);
+            edt_customer.Show();
+
+        }
     }
 }

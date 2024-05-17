@@ -16,7 +16,7 @@ namespace CarRent
 {
     public partial class transactionPage : Form
     {
-        private MySqlConnection connection;
+        private MySqlConnection connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString);
         private int pageSize = 10;
         private int currentPage = 1;
         private int limit = 10;
@@ -25,7 +25,6 @@ namespace CarRent
         public transactionPage()
         {
             InitializeComponent();
-            DBConnection();
             FetchingData(null);
             trans_page.transactionAdded += ReloadForm;
  
@@ -38,13 +37,8 @@ namespace CarRent
             FetchingData(null);
         }
 
-        private void DBConnection()
-        {
-
-            connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString);
-
-        }
-
+     
+        
         private void FetchingData(string searchTerm)
         {
             try
@@ -57,7 +51,9 @@ namespace CarRent
                 // Query to count total transactions
                 string query = string.IsNullOrEmpty(searchTerm)
                   ? "SELECT COUNT(*) FROM transaction_table"
-                  : "SELECT COUNT(*) FROM transaction_table WHERE invoice_no LIKE @invoice";
+                  : "SELECT COUNT(*) FROM transaction_table " + 
+                    "JOIN cars ON transaction_table.car_id = cars.id " + 
+                    "WHERE transaction_table.invoice_no LIKE @invoice OR cars.plate_no LIKE @invoice";
 
                 MySqlCommand countCommand = new MySqlCommand(query, connection);
                 if (!string.IsNullOrEmpty(searchTerm))
@@ -115,7 +111,7 @@ namespace CarRent
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Database Connection Error: Fetching Transaction Data\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Database Connection Error: Fetching Transaction Data\n{ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -165,16 +161,6 @@ namespace CarRent
                     e.SuppressKeyPress = true;
                 }
             }
-        }
-
-        private void search_text_enter(object sender, EventArgs e)
-        {
-            search_text.KeyDown += search_;
-        }
-
-        private void search_text_leave(object sender, EventArgs e)
-        {
-            search_text.KeyDown -= search_;
         }
 
         private void search_key_up(object sender, KeyEventArgs e)

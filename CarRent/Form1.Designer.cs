@@ -35,14 +35,18 @@ namespace CarRent
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.viewPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.logout = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.offsite = new Guna.UI2.WinForms.Guna2Button();
             this.customer_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Transaction = new Guna.UI2.WinForms.Guna2Button();
             this.carGarage = new Guna.UI2.WinForms.Guna2Button();
             this.overView = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.viewPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -84,6 +88,9 @@ namespace CarRent
             // 
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel2.BorderRadius = 10;
+            this.guna2Panel2.Controls.Add(this.logout);
+            this.guna2Panel2.Controls.Add(this.pictureBox1);
+            this.guna2Panel2.Controls.Add(this.offsite);
             this.guna2Panel2.Controls.Add(this.customer_btn);
             this.guna2Panel2.Controls.Add(this.Transaction);
             this.guna2Panel2.Controls.Add(this.carGarage);
@@ -94,6 +101,82 @@ namespace CarRent
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(168, 615);
             this.guna2Panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(61, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 27);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "DaCars";
+            // 
+            // viewPanel
+            // 
+            this.viewPanel.BackColor = System.Drawing.Color.Transparent;
+            this.viewPanel.Location = new System.Drawing.Point(199, 46);
+            this.viewPanel.Name = "viewPanel";
+            this.viewPanel.ShadowDecoration.Parent = this.viewPanel;
+            this.viewPanel.Size = new System.Drawing.Size(814, 555);
+            this.viewPanel.TabIndex = 2;
+            // 
+            // logout
+            // 
+            this.logout.BackColor = System.Drawing.Color.Transparent;
+            this.logout.BorderRadius = 5;
+            this.logout.CheckedState.Parent = this.logout;
+            this.logout.CustomImages.Parent = this.logout;
+            this.logout.FillColor = System.Drawing.Color.Transparent;
+            this.logout.Font = new System.Drawing.Font("Roboto", 10F);
+            this.logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.logout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.logout.HoverState.Parent = this.logout;
+            this.logout.Image = global::CarRent.Properties.Resources.logout;
+            this.logout.ImageOffset = new System.Drawing.Point(-9, 0);
+            this.logout.ImageSize = new System.Drawing.Size(23, 23);
+            this.logout.Location = new System.Drawing.Point(10, 343);
+            this.logout.Name = "logout";
+            this.logout.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.logout.ShadowDecoration.Parent = this.logout;
+            this.logout.Size = new System.Drawing.Size(148, 37);
+            this.logout.TabIndex = 7;
+            this.logout.Text = "Logout";
+            this.logout.TextOffset = new System.Drawing.Point(-5, 0);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::CarRent.Properties.Resources.Logo1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 33);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // offsite
+            // 
+            this.offsite.BackColor = System.Drawing.Color.Transparent;
+            this.offsite.BorderRadius = 5;
+            this.offsite.CheckedState.Parent = this.offsite;
+            this.offsite.CustomImages.Parent = this.offsite;
+            this.offsite.FillColor = System.Drawing.Color.Transparent;
+            this.offsite.Font = new System.Drawing.Font("Roboto", 10F);
+            this.offsite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.offsite.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.offsite.HoverState.Parent = this.offsite;
+            this.offsite.Image = global::CarRent.Properties.Resources.maintenance;
+            this.offsite.ImageOffset = new System.Drawing.Point(-9, 0);
+            this.offsite.ImageSize = new System.Drawing.Size(23, 23);
+            this.offsite.Location = new System.Drawing.Point(10, 300);
+            this.offsite.Name = "offsite";
+            this.offsite.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.offsite.ShadowDecoration.Parent = this.offsite;
+            this.offsite.Size = new System.Drawing.Size(148, 37);
+            this.offsite.TabIndex = 5;
+            this.offsite.Text = "Offsite";
+            this.offsite.TextOffset = new System.Drawing.Point(-5, 0);
+            this.offsite.Click += new System.EventHandler(this.offsite_Click);
             // 
             // customer_btn
             // 
@@ -190,25 +273,6 @@ namespace CarRent
             this.overView.TextOffset = new System.Drawing.Point(-1, 0);
             this.overView.Click += new System.EventHandler(this.overView_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 27);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "DaCars";
-            // 
-            // viewPanel
-            // 
-            this.viewPanel.BackColor = System.Drawing.Color.Transparent;
-            this.viewPanel.Location = new System.Drawing.Point(199, 46);
-            this.viewPanel.Name = "viewPanel";
-            this.viewPanel.ShadowDecoration.Parent = this.viewPanel;
-            this.viewPanel.Size = new System.Drawing.Size(814, 555);
-            this.viewPanel.TabIndex = 2;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +290,7 @@ namespace CarRent
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,6 +308,9 @@ namespace CarRent
         private Guna.UI2.WinForms.Guna2Button carGarage;
         private Guna.UI2.WinForms.Guna2Panel viewPanel;
         private Guna.UI2.WinForms.Guna2Button customer_btn;
+        private Guna.UI2.WinForms.Guna2Button offsite;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button logout;
     }
 }
 

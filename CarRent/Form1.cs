@@ -18,6 +18,9 @@ namespace CarRent
         private carPage Car_page = new carPage();
         private transactionPage transact_page = new transactionPage();
         private customerPage customer_page = new customerPage();
+        private CarArchive archive = new CarArchive();
+        private Form currentForm = null;
+
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +28,10 @@ namespace CarRent
             sidebarButtons.Add(carGarage);
             sidebarButtons.Add(Transaction);
             sidebarButtons.Add(customer_btn);
+            sidebarButtons.Add(offsite);
+            sidebarButtons.Add(logout);
+
+
         }
 
         //For Button Click and focus color
@@ -45,15 +52,21 @@ namespace CarRent
         //For Changing the content in the panel
         private void ShowForm(Form form)
         {
-            // Clear any existing controls in the panel
+            if (currentForm == form)
+            {
+                return; 
+            }
+
+
             viewPanel.Controls.Clear();
 
-            // Add the new form to the panel
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             viewPanel.Controls.Add(form);
-            // Show the form
+
+            currentForm = form;
+
             form.Show();
         }
 
@@ -69,6 +82,7 @@ namespace CarRent
         {
             Guna2Button clickedButton = (Guna2Button)sender;
             ChangeColor(clickedButton);
+            Dash_page.isActivated();
             ShowForm(Dash_page);
 
         }
@@ -93,6 +107,13 @@ namespace CarRent
             ChangeColor(clickedButton);
             ShowForm(customer_page);
 
+        }
+
+        private void offsite_Click(object sender, EventArgs e)
+        {
+            Guna2Button clickedButton = (Guna2Button)sender;
+            ChangeColor(clickedButton);
+            ShowForm(archive);
         }
     }
 }

@@ -155,3 +155,9 @@ C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.AddCustomer.resource
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.Add_Transaction.resources
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.EditTransaction.resources
 C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.EditCars.resources
+C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.CarArchive.resources
+C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.OffSiteCar.resources
+C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.EditCustomer.resources
+C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.EditCustomerControl.resources
+C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.DashBoardLoagControl.resources
+C:\Users\2024\source\repos\DaCars\CarRent\obj\Debug\CarRent.DashBoardCustomerControl.resources

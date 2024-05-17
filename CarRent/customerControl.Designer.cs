@@ -101,7 +101,8 @@
             this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
             this.guna2GradientButton1.Size = new System.Drawing.Size(65, 25);
             this.guna2GradientButton1.TabIndex = 16;
-            this.guna2GradientButton1.Text = "MANAGE";
+            this.guna2GradientButton1.Text = "View";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // guna2VSeparator1
             // 
@@ -225,7 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "customerControl";
             this.Size = new System.Drawing.Size(797, 33);
             this.guna2Panel2.ResumeLayout(false);
