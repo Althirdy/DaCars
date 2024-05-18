@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+  -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2024 at 05:19 AM
+-- Generation Time: May 18, 2024 at 07:21 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -55,7 +55,7 @@ INSERT INTO `cars` (`id`, `car_name`, `car_model`, `price`, `plate_no`, `color`,
 (13, ' Kia Optima', '2018', 1000, ' BCD-3231', 'silver', 0, 1, '2024-05-15'),
 (14, 'HIACE', 'toyota', 2500, '132-SGT', 'black', 0, 1, '2024-05-15'),
 (15, 'Grandia', 'Toyota', 3000, 'WE3-dsa', 'black', 0, 1, '2024-05-15'),
-(16, 'Tric', 'Honda', 2500, 'qwe-sat', 'silver', 0, 2, '2024-05-15'),
+(16, 'Tric', 'Honda', 2500, 'qwe-sat', 'silver', 0, 1, '2024-05-15'),
 (17, 'HIACE GRANDIA', '2022', 2500, 'pst-eqw', 'silver', 0, 2, '2024-05-15');
 
 -- --------------------------------------------------------
@@ -135,7 +135,10 @@ INSERT INTO `transaction_table` (`id`, `client_id`, `car_id`, `return_at`, `adde
 (13, 2, 17, '2024-05-17', '2024-05-15', 'INV-20240515163930-4813-2', 2000, 2),
 (14, 2, 9, '2024-05-24', '2024-05-16', 'INV-20240515164200-e6a0-2', 28000, 3),
 (15, 1, 10, '2024-05-20', '2024-05-16', 'INV-20240515190821-9105-1', 12000, 3),
-(16, 2, 17, '2024-05-19', '2024-05-16', 'INV-20240516083716-a617-2', 3000, 2);
+(16, 2, 17, '2024-05-19', '2024-05-16', 'INV-20240516083716-a617-2', 3000, 2),
+(17, 1, 17, '2024-05-21', '2024-05-19', 'INV-20240517135437-6468-1', 5000, 3),
+(18, 4, 17, '2024-05-18', '2024-05-17', 'INV-20240517140032-9de4-4', 2500, 2),
+(19, 1, 10, '2024-05-20', '2024-05-17', 'INV-20240517140200-f8e3-1', 9000, 2);
 
 -- --------------------------------------------------------
 
@@ -157,6 +160,26 @@ INSERT INTO `trans_status` (`id`, `status`) VALUES
 (2, 'FINISHED'),
 (3, 'CANCELED'),
 (4, 'RESERVED');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` text NOT NULL,
+  `added_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `added_at`) VALUES
+(1, 'admin', 'e3274be5c857fb42ab72d786e281b4b8', '2024-05-17 07:53:25');
 
 --
 -- Indexes for dumped tables
@@ -199,6 +222,13 @@ ALTER TABLE `trans_status`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `username` (`username`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -224,13 +254,19 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `transaction_table`
 --
 ALTER TABLE `transaction_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `trans_status`
 --
 ALTER TABLE `trans_status`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
