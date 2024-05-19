@@ -313,7 +313,7 @@ namespace CarRent
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.07407F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel14, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel12, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel11, 3, 0);
@@ -339,7 +339,7 @@ namespace CarRent
             // guna2HtmlLabel12
             // 
             this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(283, 4);
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(281, 4);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
             this.guna2HtmlLabel12.Size = new System.Drawing.Size(33, 15);
             this.guna2HtmlLabel12.TabIndex = 28;
@@ -348,7 +348,7 @@ namespace CarRent
             // guna2HtmlLabel11
             // 
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(194, 4);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(192, 4);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             this.guna2HtmlLabel11.Size = new System.Drawing.Size(51, 15);
             this.guna2HtmlLabel11.TabIndex = 27;
@@ -366,7 +366,7 @@ namespace CarRent
             // guna2HtmlLabel9
             // 
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(124, 4);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(122, 4);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(63, 15);
             this.guna2HtmlLabel9.TabIndex = 4;
@@ -430,6 +430,7 @@ namespace CarRent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(413, 659);
             this.ControlBox = false;
             this.Controls.Add(this.flowLayoutPanel1);

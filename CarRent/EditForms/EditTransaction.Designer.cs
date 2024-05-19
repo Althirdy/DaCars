@@ -381,7 +381,6 @@ namespace CarRent
             this.rent_date.Size = new System.Drawing.Size(179, 36);
             this.rent_date.TabIndex = 29;
             this.rent_date.Value = new System.DateTime(2024, 5, 14, 20, 33, 57, 464);
-            this.rent_date.ValueChanged += new System.EventHandler(this.Date_Rent_Value_Change);
             // 
             // return_date
             // 
@@ -405,6 +404,7 @@ namespace CarRent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(427, 502);
             this.ControlBox = false;
             this.Controls.Add(this.return_date);

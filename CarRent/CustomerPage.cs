@@ -176,14 +176,7 @@ namespace CarRent
             }
         }
 
-        private void SearchFocus(object sender, EventArgs e)
-        {
-            search_text.KeyDown += searchDown;
-        }
-        private void search_text_Leave(object sender, EventArgs e)
-        {
-            search_text.KeyDown -= searchDown;
-        }
+
 
         private void KeyUp(object sender, KeyEventArgs e)
         {

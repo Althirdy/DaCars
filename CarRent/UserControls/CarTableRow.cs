@@ -93,7 +93,7 @@ namespace CarRent
             get { return status_props; }
             set {
                 status_props = value;
-                if (value == 1)
+                if (value == 2)
                 {
                     statusLabel.Text = "RENTED";
                     statusLabel.FillColor = Color.FromArgb(225, 75, 86);
@@ -102,7 +102,7 @@ namespace CarRent
                     guna2Panel1.FillColor = Color.FromArgb(224, 228, 255);
                     guna2GradientButton1.Hide();
                 }
-                else if (value == 4) {
+                else if (value == 1) {
                     statusLabel.Text = "RESERVED";
                     statusLabel.FillColor = Color.FromArgb(88, 88, 88);
                     statusLabel.HoverState.FillColor = Color.FromArgb(88, 88, 88);

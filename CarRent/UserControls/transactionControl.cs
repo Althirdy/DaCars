@@ -91,14 +91,14 @@ namespace CarRent
         {
             get { return transaction_status; }
             set { transaction_status = value;
-                if (transaction_status == 1)
+                if (transaction_status == 2)
                 {
                     status_text.Text = "ON GOING";
                     status_text.FillColor = Color.FromArgb(50, 89, 117);
                     status_text.HoverState.FillColor = Color.FromArgb(50, 89, 117);
                     status_text.PressedColor = Color.FromArgb(50, 89, 117);
                 }
-                else if (transaction_status == 2)
+                else if (transaction_status == 3)
                 {
                     status_text.Text = "FINISHED";
                     status_text.FillColor = Color.FromArgb(96, 150, 254);
@@ -106,7 +106,7 @@ namespace CarRent
                     status_text.PressedColor = Color.FromArgb(96, 150, 254);
                     guna2GradientButton1.Hide();
                 }
-                else if (transaction_status == 4)
+                else if (transaction_status == 1)
                 {
                     status_text.Text = "RESERVED";
                     status_text.FillColor = Color.FromArgb(88, 88, 88);

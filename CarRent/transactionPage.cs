@@ -29,9 +29,7 @@ namespace CarRent
             trans_page.transactionAdded += ReloadForm;
  
         }
-        private void Updated() {
-            FetchingData(null);
-        }
+        public void Updated() => FetchingData(null);
         private void ReloadForm()
         {
             FetchingData(null);
@@ -68,7 +66,7 @@ namespace CarRent
                   JOIN cars AS c ON tt.car_id = c.id 
                   JOIN customer AS cu ON tt.client_id = cu.id 
                   {(string.IsNullOrEmpty(searchTerm) ? "" : "WHERE tt.invoice_no LIKE @invoice OR c.plate_no LIKE @invoice")} 
-                  ORDER BY tt.added_at DESC 
+                  ORDER BY tt.status ASC
                   LIMIT {pageSize} OFFSET {(currentPage - 1) * pageSize}";
 
                 MySqlCommand command = new MySqlCommand(query_select, connection);
@@ -121,7 +119,7 @@ namespace CarRent
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            trans_page.Hide();
+            trans_page.Show();
         }
 
         private void Add_pagination(object sender, EventArgs e)

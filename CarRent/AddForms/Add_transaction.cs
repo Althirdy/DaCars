@@ -162,14 +162,14 @@ namespace CarRent
             }
             if (selectedDate > today)
             {
-                transaction_status = 4; // RESERVED
+                transaction_status = 1; // RESERVED
                 //TimeSpan difference_reserved = selectedDate - today;
                 //day_before_rent = difference_reserved.Days;
                 ////MessageBox.Show($"Days before rent [Booked in]: {day_before_rent}");
             }
             else if (selectedDate == today)
             {
-                transaction_status = 1; // ON GOING
+                transaction_status = 2; // ON GOING
             }
             string invoice_no = GenerateInvoiceNumber(customer_id);
             TimeSpan difference = selectedReturnDate - selectedDate;
